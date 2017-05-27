@@ -6,21 +6,22 @@ rootdir = os.path.dirname(os.path.realpath('__file__'))
 moddir = os.path.join(rootdir, 'libtacsim')
 os.system('cd %s; scons install; cd -' % moddir)
 
-from graphsim import __version__
-from graphsim import __author__
-from graphsim import __email__
-
 setup(
     name = "graphsim",
-    version = __version__,
+    version = '0.2.6.8',
     url = 'https://github.com/caesar0301/graphsim',
-    author = __author__,
-    author_email = __email__,
+    author = 'Xiaming Chen',
+    author_email = 'chenxm35@gmail.com',
     description = 'Graph similarity algorithms based on NetworkX.',
     long_description = open(os.path.join(os.path.dirname(__file__), 'README.md')).read(),
     license = "BSC License",
     packages = find_packages(),
     keywords = ['graph', 'graph similarity', 'graph matching'],
+    install_requires=[
+          'networkx >= 1.11',
+          'typedecorator >= 0.0.4',
+          'decorator >= 4.0.10'
+    ],
     classifiers = [
         'Development Status :: 4 - Beta',
         'Environment :: Console',
@@ -33,6 +34,8 @@ setup(
             'Programming Language :: Python :: 3.2',
             'Programming Language :: Python :: 3.3',
             'Programming Language :: Python :: 3.4',
+            'Programming Language :: Python :: 3.5',
+            'Programming Language :: Python :: 3.6',
             'Topic :: Software Development :: Libraries :: Python Modules',
    ],
 )
