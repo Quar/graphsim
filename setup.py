@@ -20,7 +20,8 @@ setup(
     install_requires=[
           'networkx >= 1.11',
           'typedecorator >= 0.0.4',
-          'decorator >= 4.0.10'
+          'decorator >= 4.0.10',
+          'numpy >= 1.12.1'
     ],
     classifiers = [
         'Development Status :: 4 - Beta',
